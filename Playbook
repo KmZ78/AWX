@@ -1,0 +1,24 @@
+---
+- name: Create VM vshphere
+  hosts: localhost
+  connection: local 
+  tasks:
+    - vmware_guest:
+       hostname: 
+       username: 
+       password: 
+       validate_certs: 
+       datacenter: 
+       folder: 
+       guest_id: 
+       name: 
+       state: 
+       disk:
+       - size_gb: 10
+         type: thin
+         datastore: 
+       hardware:
+         memory_mb: 
+         num_cpus: 
+         scsi: 
+      register: 

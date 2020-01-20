@@ -1,19 +1,24 @@
+---
+- name: Create VM vshphere
+  hosts: localhost
+  connection: local
+  tasks:
     - vmware_guest:
-       hostname: 
-       username: 
-       password: 
-       validate_certs: 
-       datacenter: 
-       folder: 
-       guest_id: 
-       name: 
-       state: 
+       hostname: vmlabvct001.labvmware.local
+       username: Administrator@vsphere.local
+       password: P@ssword1234
+       validate_certs: no
+       datacenter: 'Datacenter¨Paris'
+       folder: /PROD/
+       guest_id: centos64Guest
+       name: test_vm_0001
+       state: present
        disk:
        - size_gb: 10
          type: thin
-         datastore: 
+         datastore: FreeNAS1
        hardware:
-         memory_mb: 
-         num_cpus: 
-         scsi: 
-      register: 
+         memory_mb: 512
+         num_cpus: 1
+         scsi: paravirtual
+      register: deploy_vm

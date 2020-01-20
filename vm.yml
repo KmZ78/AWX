@@ -4,7 +4,7 @@
   connection: local 
   tasks:
     - vmware_guest:
-       hostname: vmlabvct001.labvmware.local
+       hostname: 192.168.68.50
        username: Administrator@vsphere.local
        password: P@ssword1234
        validate_certs: no
